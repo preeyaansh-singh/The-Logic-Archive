@@ -18,6 +18,7 @@ def prime_between(start, end):
         if is_prime:
             primes.append(number)
 
+    print(len(primes))
     return primes
 
 
