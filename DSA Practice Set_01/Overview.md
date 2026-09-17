@@ -10,3 +10,5 @@
 | **08** | **First Non-Repeating Character** | Two-pass hash table lookup |
 | **09** | **Subarray Sum Equals Target** | Sliding window / prefix sum |
 | **10** | **Staircase Problem** | Fibonacci dynamic programming |
+
+**End**
