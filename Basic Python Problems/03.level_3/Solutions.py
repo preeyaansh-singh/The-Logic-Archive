@@ -157,3 +157,4 @@ if __name__ == "__main__":
     q28_fibonacci()
     q29_gcd()
     q30_lcm()
+print("Byee yeee")
