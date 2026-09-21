@@ -1,104 +1,104 @@
 
-## Level 8 – Array thinking
+## Level 7 – More array operations
 
 ---
 
-### Q71. Remove Even Numbers (Keep Only Odd)
+### Q61. Double Each Element
 
-Return a new array with only odd numbers.
+Given an array, return a new array with each element doubled.
 
-* Input: `[1, 2, 3, 4, 5]` → Output: `[1, 3, 5]`
-* Input: `[2, 4, 6]` → Output: `[]`
-* Input: `[1, 3, 5]` → Output: `[1, 3, 5]`
-
----
-
-### Q72. Remove Duplicates
-
-Return a new array with unique elements (order can be original order).
-
-* Input: `[1, 2, 2, 3, 3, 3]` → Output: `[1, 2, 3]`
-* Input: `["a", "a", "b"]` → Output: `["a", "b"]`
+* Input: `[1, 2, 3]` → Output: `[2, 4, 6]`
+* Input: `[5, -2]` → Output: `[10, -4]`
 * Input: `[]` → Output: `[]`
 
 ---
 
-### Q73. Concatenate Two Arrays
+### Q62. Square Each Element
 
-Given two arrays, merge them into one.
+Given an array, return a new array with each element squared.
 
-* Input: `[1, 2]` and `[3, 4]` → Output: `[1, 2, 3, 4]`
-* Input: `[]` and `[5, 6]` → Output: `[5, 6]`
-* Input: `["a"]` and `["b", "c"]` → Output: `["a", "b", "c"]`
-
----
-
-### Q74. Intersection of Two Arrays (Common Elements)
-
-Return new array with elements present in both (no duplicates).
-
-* Input: `[1, 2, 3, 4]` and `[3, 4, 5]` → Output: `[3, 4]`
-* Input: `[1, 2]` and `[3, 4]` → Output: `[]`
-* Input: `[1, 1, 2]` and `[1, 2, 2]` → Output: `[1, 2]`
+* Input: `[1, 2, 3]` → Output: `[1, 4, 9]`
+* Input: `[-2, 4]` → Output: `[4, 16]`
+* Input: `[0]` → Output: `[0]`
 
 ---
 
-### Q75. Rotate Array Right by 1
+### Q63. Reverse Array into New Array
 
-Move last element to front.
+Given an array, create a new array which is the reverse.
 
-* Input: `[1, 2, 3, 4]` → Output: `[4, 1, 2, 3]`
-* Input: `[10]` → Output: `[10]`
+* Input: `[1, 2, 3]` → Output: `[3, 2, 1]`
+* Input: `["a", "b", "c"]` → Output: `["c", "b", "a"]`
+* Input: `[7]` → Output: `[7]`
+
+---
+
+### Q64. Copy Array
+
+Given an array, create an exact copy.
+
+* Input: `[1, 2, 3]` → Output: `[1, 2, 3]`
 * Input: `[]` → Output: `[]`
+* Input: `["x", "y"]` → Output: `["x", "y"]`
 
 ---
 
-### Q76. Rotate Array Left by 1
+### Q65. Check if Array Contains a Value
 
-Move first element to end.
+Given an array and a value, return true if it’s present.
 
-* Input: `[1, 2, 3, 4]` → Output: `[2, 3, 4, 1]`
-* Input: `[10]` → Output: `[10]`
-* Input: `[]` → Output: `[]`
-
----
-
-### Q77. Count Elements Greater than Average
-
-Count how many numbers are greater than the average of array.
-
-* Input: `[1, 2, 3, 4, 5]` → Avg = 3 → Elements greater: 4,5 → Output: `2`
-* Input: `[10, 10, 10]` → Avg = 10 → Elements greater: none → Output: `0`
-* Input: `[5, 15]` → Avg = 10 → Elements greater: 15 → Output: `1`
+* Input: `arr = [1, 2, 3], value = 2` → Output: `true`
+* Input: `arr = [1, 2, 3], value = 5` → Output: `false`
+* Input: `arr = [], value = 1` → Output: `false`
 
 ---
 
-### Q78. Largest Positive and Smallest Negative
+### Q66. Find Index of a Value
 
-Find largest positive and smallest negative (if they exist).
+Given an array and a value, return index or `-1`.
 
-* Input: `[-5, -1, 3, 7, -2]` → Largest positive = `7`, Smallest negative = `-5`
-* Input: `[1, 2, 3]` → Largest positive = `3`, Smallest negative = `null` (or something similar)
-* Input: `[-3, -1]` → Largest positive = `null`, Smallest negative = `-3`
-
----
-
-### Q79. Count 0s and 1s in Binary Array
-
-Given array of only 0s and 1s, count both.
-
-* Input: `[0, 1, 0, 1, 1]` → Output: `zeros = 2, ones = 3`
-* Input: `[1, 1, 1]` → Output: `zeros = 0, ones = 3`
-* Input: `[0, 0]` → Output: `zeros = 2, ones = 0`
+* Input: `[10, 20, 30], value = 20` → Output: `1`
+* Input: `[10, 20, 30], value = 40` → Output: `-1`
+* Input: `["a", "b"], value = "b"` → Output: `1`
 
 ---
 
-### Q80. Separate Even and Odd into Two Arrays
+### Q67. Frequency of a Value
 
-Given an array, return two arrays: evens and odds.
+Given an array and a value, count how many times value appears.
 
-* Input: `[1, 2, 3, 4, 5]` → Output: `evens = [2, 4]`, `odds = [1, 3, 5]`
-* Input: `[2, 4, 6]` → Output: `evens = [2, 4, 6]`, `odds = []`
-* Input: `[1, 3, 5]` → Output: `evens = []`, `odds = [1, 3, 5]`
+* Input: `[1, 2, 2, 3, 2], value = 2` → Output: `3`
+* Input: `[5, 5, 5], value = 5` → Output: `3`
+* Input: `[1, 2, 3], value = 4` → Output: `0`
+
+---
+
+### Q68. Check if Array is Sorted (Increasing)
+
+Return true if each element is >= previous one.
+
+* Input: `[1, 2, 3, 4]` → Output: `true`
+* Input: `[1, 2, 2, 3]` → Output: `true`
+* Input: `[3, 2, 1]` → Output: `false`
+
+---
+
+### Q69. Second Largest Element
+
+Assume array has at least 2 distinct elements.
+
+* Input: `[10, 5, 8, 20]` → Largest = 20 → Second largest = `10`
+* Input: `[3, 1, 2]` → Output: `2`
+* Input: `[100, 50]` → Output: `50`
+
+---
+
+### Q70. Second Smallest Element
+
+Assume array has at least 2 distinct elements.
+
+* Input: `[10, 5, 8, 20]` → Smallest = 5 → Second smallest = `8`
+* Input: `[3, 1, 2]` → Output: `2`
+* Input: `[100, 50]` → Output: `100`
 
 ---

@@ -1,96 +1,78 @@
-# Q71. Remove Even Numbers (Keep Only Odd)
-def remove_even(arr):
-    return [x for x in arr if x % 2 != 0]
+# Q61. Double Each Element
+def double_elements(arr):
+    return [x * 2 for x in arr]
 
 
-# Q72. Remove Duplicates
-def remove_duplicates(arr):
-    seen = set()
-    result = []
-    for x in arr:
-        if x not in seen:
-            seen.add(x)
-            result.append(x)
-    return result
+# Q62. Square Each Element
+def square_elements(arr):
+    return [x ** 2 for x in arr]
 
 
-# Q73. Concatenate Two Arrays
-def concatenate_arrays(arr1, arr2):
-    return arr1 + arr2
+# Q63. Reverse Array into New Array
+def reverse_array(arr):
+    return arr[::-1]
 
 
-# Q74. Intersection of Two Arrays (No Duplicates)
-def intersection(arr1, arr2):
-    return list(set(arr1) & set(arr2))
+# Q64. Copy Array
+def copy_array(arr):
+    return arr[:]
 
 
-# Q75. Rotate Array Right by 1
-def rotate_right(arr):
-    if not arr:
-        return arr
-    return [arr[-1]] + arr[:-1]
+# Q65. Check if Array Contains a Value
+def contains_value(arr, value):
+    return value in arr
 
 
-# Q76. Rotate Array Left by 1
-def rotate_left(arr):
-    if not arr:
-        return arr
-    return arr[1:] + [arr[0]]
+# Q66. Find Index of a Value
+def find_index(arr, value):
+    for i in range(len(arr)):
+        if arr[i] == value:
+            return i
+    return -1
 
 
-# Q77. Count Elements Greater than Average
-def count_greater_than_avg(arr):
-    if not arr:
-        return 0
-    avg = sum(arr) / len(arr)
+# Q67. Frequency of a Value
+def frequency(arr, value):
     count = 0
     for x in arr:
-        if x > avg:
+        if x == value:
             count += 1
     return count
 
 
-# Q78. Largest Positive and Smallest Negative
-def pos_neg_values(arr):
-    largest_pos = None
-    smallest_neg = None
-    
-    for x in arr:
-        if x > 0:
-            if largest_pos is None or x > largest_pos:
-                largest_pos = x
-        elif x < 0:
-            if smallest_neg is None or x < smallest_neg:
-                smallest_neg = x
-                
-    return largest_pos, smallest_neg
+# Q68. Check if Array is Sorted (Increasing)
+def is_sorted(arr):
+    for i in range(1, len(arr)):
+        if arr[i] < arr[i - 1]:
+            return False
+    return True
 
 
-# Q79. Count 0s and 1s in Binary Array
-def count_binary(arr):
-    zeros = 0
-    ones = 0
+# Q69. Second Largest Element
+def second_largest(arr):
+    largest = float('-inf')
+    second = float('-inf')
     
     for x in arr:
-        if x == 0:
-            zeros += 1
-        elif x == 1:
-            ones += 1
+        if x > largest:
+            second = largest
+            largest = x
+        elif x > second and x != largest:
+            second = x
             
-    return zeros, ones
+    return second
 
 
-# Q80. Separate Even and Odd into Two Arrays
-def separate_even_odd(arr):
-    evens = []
-    odds = []
+# Q70. Second Smallest Element
+def second_smallest(arr):
+    smallest = float('inf')
+    second = float('inf')
     
     for x in arr:
-        if x % 2 == 0:
-            evens.append(x)
-        else:
-            odds.append(x)
+        if x < smallest:
+            second = smallest
+            smallest = x
+        elif x < second and x != smallest:
+            second = x
             
-    return evens, odds
-
-print("Thank You")
+    return second
