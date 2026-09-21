@@ -92,3 +92,5 @@ def separate_even_odd(arr):
             odds.append(x)
             
     return evens, odds
+
+print("Thank You")
